@@ -19,7 +19,10 @@ const port = process.env.PORT || 4000;
 
 routes(app);
 mongoose
-  .connect(process.env.CONNECT_URL)
+  .connect(process.env.CONNECT_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("Connected!"))
   .catch((err) => console.log("Connect error", err));
 
