@@ -1,0 +1,197 @@
+
+POST http://localhost:4000/api/user/sign-up
+Content-Type: application/json
+
+ {
+    "name": "Trương Minh Tiên",
+    "email": "tien@gmail.com",
+    "password": "11111",
+    "confirm": "11111",
+    "isAdmin": "false",
+    "phone": "03823273443",
+    "address": "Thị trấn Tân An , Hiệp Đức ,Quảng Nam",
+    "avatar": "fdffdf"
+  }
+
+###
+
+
+POST http://localhost:4000/api/user/sign-up
+Content-Type: application/json
+
+{
+      "email": "admin@gmail.com",
+    "password": "11111",
+    "confirm": "11111"
+}
+
+###
+
+POST http://localhost:4000/api/user/sign-in
+Content-Type: application/json
+
+{
+      "email": "admin@gmail.com",
+    "password": "11111"
+}
+
+###
+
+
+PUT http://localhost:4000/api/user/update-user/641330b94375eb48ff8e81b6
+token:baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTMzMGI5NDM3NWViNDhmZjhlODFiNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODk3OTY4NSwiZXhwIjoxNjc4OTc5Njk1fQ.boxLgxk6uE9Yb7lhAZoMzzpepv2zypZChdmYUdfoABo
+Content-Type: application/json
+
+ {
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "isAdmin": "true",
+    "phone": "03823273443",
+    "address": "Thị trấn Tân An , Hiệp Đức ,Quảng Nam",
+    "avatar": "fdffdf"
+  }
+
+###
+
+DELETE  http://localhost:4000/api/user/delete-user/6409c8a2b902cc9fc4fe881d
+token : bears eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDllZTlhZjViNmQ0ZDM4MjFiMDk5MiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2Nzg1MjY0OTIsImV4cCI6MTY3ODUzMDA5Mn0.a96reTAsAbjLwCzvI98kD7NLSJh4tQE5ThOS5H1vwV8
+
+
+###
+
+GET  http://localhost:4000/api/user/getall
+
+
+
+
+###
+
+GET  http://localhost:4000/api/user/get-detail/6409ee9af5b6d4d3821b0992
+token: bears eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDllZTlhZjViNmQ0ZDM4MjFiMDk5MiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2Nzg1MjY4NjEsImV4cCI6MTY3ODUzMDQ2MX0.TnnP6uV986V8_NsMcfKBvAQg0pU-055GutG0zMNO4-M
+
+
+
+###
+
+
+###
+
+POST  http://localhost:4000/api/user/refresh-token
+
+
+
+###
+
+POST  http://localhost:4000/api/user/log-out
+
+###
+# -------------- PRODUCT ----------------
+
+
+
+PUT  http://localhost:4000/api/product/create
+Content-Type: application/json
+
+{
+    "name": "Điện th8oại 1s234",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/23/96/c8/4ed8e6658ef4632b2e6880ba359a6420.jpg.webp",
+    "type":"thiết bị",
+    "price":"550000",
+    "countInStock": "10",
+    "rating": "4.5",
+    "description": "Điện thoại samsum mới nhất 2023"
+}
+
+###
+
+
+PUT  http://localhost:4000/api/product/update/640ac328563b7082c0da24f1
+Content-Type: application/json
+
+{
+    "name": "Điện thoại chi chi ri",
+    "image": "cùng họn lập trình cùng với Đạt nào"
+}
+
+###
+
+DELETE  http://localhost:4000/api/product/delete/640ac6f6d806538ae316de45
+
+
+###
+
+GET  http://localhost:4000/api/product/detail/640ac6f6d806538ae316de45
+
+###
+
+# GET  http://localhost:4000/api/product/getall?limit=2&page=0&filter=name&filter=Điện thoại
+GET  http://localhost:4000/api/product/getall 
+
+
+###
+POST  http://localhost:4000/api/product/insert
+
+###
+GET  http://localhost:4000/api/product/get-all-type
+
+###
+GET  http://localhost:4000/api/product/getall?filter=type&filter=1
+
+###
+
+GET http://localhost:4000/api/product/getall?limit=1&page=0
+
+
+
+
+
+
+
+
+
+
+
+# -----------------------
+###
+
+PUT http://localhost:4000/api/order/create
+token: bears eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2NmYWJmMDkwMGFlYjc1NzM3ZWZmNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODE3MTg4MTMsImV4cCI6MTY4MjU4MjgxM30.xrDiexTFaTCNupuYZqGdqp0zUYFqFwlF7A_2eeZF3lM
+Content-Type: application/json
+
+
+{
+  "orderItems": [
+    {
+      "name": "111",
+      "amount": "111",
+      "image": "111",
+      "price": "111",
+      "product":"64103c3a71829adbbb0ef597"
+    }
+  ],
+  "shippingAddress": [
+    {
+      "fullName": "111",
+      "address": "111",
+      "city": "111",
+      "phone": "111"
+    }
+  ],
+  "paymentMethod": "111",
+  "itemsPrice": "1111",
+  "shippingPrice": "1111",
+  "taxPrice": "1111",
+  "totalPrice": "1111"
+}
+
+# -----------------------
+###
+
+GET http://localhost:4000/api/order/all
+token: bears eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2NmYWJmMDkwMGFlYjc1NzM3ZWZmNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODE3MTg4MTMsImV4cCI6MTY4MjU4MjgxM30.xrDiexTFaTCNupuYZqGdqp0zUYFqFwlF7A_2eeZF3lM
+
+###
+
+GET http://localhost:4000/api/order/detail/643d0c6fdc64a1ebd74c416d
+token: bears eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2NmYWJmMDkwMGFlYjc1NzM3ZWZmNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODE3MTg4MTMsImV4cCI6MTY4MjU4MjgxM30.xrDiexTFaTCNupuYZqGdqp0zUYFqFwlF7A_2eeZF3lM
+
