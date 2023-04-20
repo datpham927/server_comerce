@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: process.env.REACT_API_URL_CLIENT || "http://localhost:3000",
+    origin:"https://client-comerce.vercel.app",
   })
 );
 const port = process.env.PORT || 4000;
